@@ -1,19 +1,29 @@
 ul {
+    display: block
     padding: 0;
+    background-color: #000;
+    color: #fff;
 }
 
 .nav ul {
     list-style: none;
     width: 100%;
+    padding: 1em 0;
 }
 
 .nav>ul>li {
     display: inline-block;
     position: relative;
+    font-weight: 700;
+    padding: 0 1em;
 }
 
 .nav>ul>li>ul {
-    display: none;
+    /* display: none; */
     position: absolute;
     width: 300px;
+    font-weight: 300;
+    border: 1px solid black;
+    background: transparent;
+    color: #000;
 }

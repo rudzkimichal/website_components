@@ -25,6 +25,7 @@ ul {
     width: calc(100% / 6 - 2em);
 
     img {
+      cursor: pointer;
       width: 100%;
     }
   }
@@ -53,5 +54,6 @@ ul {
   &:hover {
     background-color: #000;
     color: #fff;
+    cursor: pointer;
   }
 }
