@@ -23,4 +23,4 @@ out/
 gulpfile.js
 package.json
 package-lock.json
-./scss
+**/scss/
