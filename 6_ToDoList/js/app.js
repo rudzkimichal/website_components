@@ -32,8 +32,7 @@ function init() {
 			taskItem.appendChild(completeBtn);
 
 			taskInput.value = null;
-			toDoCounter++;
-			counter.innerText = `Remaining tasks: ${toDoCounter}`;
+			showRemainingTasks(taskItem);
 
 			deleteBtn.addEventListener('click', function() {
 				taskItem.remove();
@@ -44,14 +43,12 @@ function init() {
 			completeBtn.addEventListener('click', function() {
 				if(this.parentElement.classList.value.includes('done')) {
 					taskItem.classList.remove('done');
-					toDoCounter++;
 				}
 				else {
 					taskItem.classList.add('done');
-					toDoCounter--;
 				}
 
-				counter.innerText = `Remaining tasks: ${toDoCounter}`;
+				showRemainingTasks(this.parentElement);
 			});
 		} else {
 			alert('Task description should consist of 6-99 characters.');
@@ -62,6 +59,9 @@ function init() {
 		taskList.querySelectorAll('li.done').forEach(item => item.remove());
 	});
 
-
-
+	function showRemainingTasks(taskItem) {
+		if(taskItem.classList.value.includes('done')) toDoCounter--;
+		else toDoCounter++;
+		counter.innerText = `Remaining tasks: ${toDoCounter}`;
+	}
 }
