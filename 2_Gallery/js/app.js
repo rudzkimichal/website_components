@@ -13,10 +13,8 @@ function init() {
 
   imgList.forEach(function(item) {
     item.addEventListener('click', function() {
-      console.log('Event OK');
 
       const fullScreenWindow = document.createElement('div');
-
       fullScreenWindow.classList.add('fullScreen');
       const closeButton = document.createElement('button');
       closeButton.innerText = 'Close';
